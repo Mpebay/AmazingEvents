@@ -1,0 +1,29 @@
+.logo {
+    width: 18rem;
+}
+
+.menu-desplegado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    width: 2rem;
+}
+
+.main-details {
+    min-height: 81vh;
+}
+
+main {
+    min-height: 76vh;
+}
+
+.seccion-details {
+    margin-top: 10rem;
+}
+
+.main-details {
+    min-height: 82vh;
+}
