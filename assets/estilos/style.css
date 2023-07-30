@@ -2,12 +2,6 @@
     width: 18rem;
 }
 
-.menu-desplegado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .footer img {
     width: 2rem;
 }
@@ -26,4 +20,9 @@ main {
 
 .main-details {
     min-height: 82vh;
+}
+
+.img-inicio{
+    height: 190.66px ;
+    border-radius: 5px 5px 0px 0px;
 }
