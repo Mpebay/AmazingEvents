@@ -2,6 +2,10 @@
     width: 18rem;
 }
 
+footer{
+    min-height: 10vh;
+}
+
 .footer img {
     width: 2rem;
 }
@@ -25,4 +29,16 @@ main {
 .img-inicio{
     height: 190.66px ;
     border-radius: 5px 5px 0px 0px;
+}
+
+.form-nombre{
+    width: 30vw;
+}
+
+.form-email{
+    width: 30vw;
+}
+
+.form-msj{
+    width: 30vw;
 }
