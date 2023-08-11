@@ -1,0 +1,66 @@
+.logo {
+    width: 18rem;
+}
+
+footer {
+    min-height: 10vh;
+}
+
+.footer img {
+    width: 2rem;
+}
+
+.main-details {
+    min-height: 81vh;
+}
+
+main {
+    min-height: 76vh;
+}
+
+.seccion-details {
+    margin-top: 10rem;
+}
+
+.main-details {
+    min-height: 82vh;
+}
+
+.img-inicio {
+    height: 190.66px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.form-nombre {
+    width: 30vw;
+}
+
+.form-email {
+    width: 30vw;
+}
+
+.form-msj {
+    width: 30vw;
+}
+
+.carrusel {
+    height: 30vh;
+    margin-bottom: 1rem;
+}
+
+.carrusel img {
+    height: 30vh;
+    object-fit: cover;
+}
+
+#form-busqueda{
+    display: flex;
+    justify-content: center;
+}
+#texto-barra-busqueda{
+    width: 30rem;
+}
+#contenedorCheckBarra{
+    display: flex;
+    
+}
