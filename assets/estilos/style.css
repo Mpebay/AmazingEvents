@@ -2,7 +2,7 @@
     width: 18rem;
 }
 
-footer{
+footer {
     min-height: 10vh;
 }
 
@@ -26,19 +26,41 @@ main {
     min-height: 82vh;
 }
 
-.img-inicio{
-    height: 190.66px ;
+.img-inicio {
+    height: 190.66px;
     border-radius: 5px 5px 0px 0px;
 }
 
-.form-nombre{
+.form-nombre {
     width: 30vw;
 }
 
-.form-email{
+.form-email {
     width: 30vw;
 }
 
-.form-msj{
+.form-msj {
     width: 30vw;
+}
+
+.carrusel {
+    height: 30vh;
+    margin-bottom: 1rem;
+}
+
+.carrusel img {
+    height: 30vh;
+    object-fit: cover;
+}
+
+#form-busqueda{
+    display: flex;
+    justify-content: center;
+}
+#texto-barra-busqueda{
+    width: 30rem;
+}
+#contenedorCheckBarra{
+    display: flex;
+    flex-direction: wrap;
 }

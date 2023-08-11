@@ -22,41 +22,36 @@
             <a class="btn btn-secondary m-1" href="./stats.html" role="button">Stats</a>
         </nav>
     </header>
+    <div id="carouselExampleAutoplaying" class=" carrusel carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/optional_banner_1.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/optional_banner_2.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/optional_banner_3.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <h3 class="d-flex justify-content-center bg-secondary align-items-center">Upcoming events</h3>
-    <div class="d-flex flex-wrap justify-content-between m-2">
-        <div class=" d-flex flex-wrap">
-
-            <div class="form-check">
-                <input class="form-check-input ms-3" type="checkbox" value="" id="flexCheckDefault1">
-                <label class="form-check-label" for="flexCheckDefault1">
-                    Category
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input ms-3" type="checkbox" value="" id="flexCheckChecked1">
-                <label class="form-check-label" for="flexCheckChecked1">
-                    Category
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input ms-3" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Category
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input ms-3" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">
-                    Category
-                </label>
-            </div>
-        </div>
-        <div>
-            <form role="search">
-                <input class=" me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success me-4" type="submit">Search</button>
-            </form>
-        </div>
+    <div id="contenedorCheckBarra">
+        <div class=" d-flex justify-content-between m-2" id="check-up" ></div>
+         <form id="form-busqueda" role="search">
+            <input id="texto-barra-busqueda" class=" me-2" type="search" placeholder="Search" aria-label="Search">
+             <button id="boton-buscar" class="btn btn-outline-success me-4" type="submit">Search</button>
+        </form>
     </div>
 
     <main class="d-flex flex-wrap justify-content-center" id="main-up">

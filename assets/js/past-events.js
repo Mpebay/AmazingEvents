@@ -2,8 +2,8 @@ const check = document.getElementById("check");
 const formBusqueda = document.getElementById("form-busqueda");
 const main = document.getElementById("main");
 const input = document.getElementById("texto-barra-busqueda");
-const events = data.events;
 
+const events = data.events.filter();
 function crearcheck(category) {
   return `<div class="form-check">
                 <input class="form-check-input ms-3" type="checkbox" value="${category}" id="flexCheckDefault1">
@@ -24,17 +24,16 @@ function mostrarCheck(categoriasSinRepetir, check) {
 mostrarCheck(categoriasSinRepetir, check);
 
 function filtrarPorCategoria(arrayEvents) {
-    const checkboxesSeleccionados = document.querySelectorAll(
-        "input[type=checkbox]:checked"
-    );
-    const valoresCheckbox = Array.from(checkboxesSeleccionados).map(
-        (input) => input.value
-    );
-    
-    const filtrados = arrayEvents.filter((evento) =>
-        valoresCheckbox.includes(evento.category)
-    );
-    return filtrados;
+  const checkboxesSeleccionados = document.querySelectorAll(
+    "input[type=checkbox]:checked"
+  );
+  const valoresCheckbox = Array.from(checkboxesSeleccionados).map(
+    (input) => input.value
+  );
+  const filtrados = arrayEvents.filter((evento) =>
+    valoresCheckbox.includes(evento.category)
+  );
+  return filtrados;
 }
 
 function filtrarPorNombre() {
@@ -62,44 +61,23 @@ function crearTarjeta(evento) {
                 </div>`;
 }
 
-function mostrarTarjeta(listaEventos, main) {
-  main.innerHTML = "";
+function mostrarTarjeta(listaEventos, contenedor) {
+  contenedor.innerHTML = "";
   for (const evento of listaEventos) {
     const tarjetaCreada = crearTarjeta(evento);
-    main.innerHTML += tarjetaCreada;
+    contenedor.innerHTML += tarjetaCreada;
   }
 }
 mostrarTarjeta(data.events, contenedor);
 
-input.addEventListener("input", (mostrarTarjeta) => {
+input.addEventListener("input", () => {
   const filtradoPorNombre = filtrarPorNombre(events, input.value);
   let filtradoPorCategoria = filtrarPorCategoria(filtradoPorNombre);
-  condicionalesCruzadas(filtradoPorNombre, filtradoPorCategoria)
+  mostrarTarjeta(filtradoPorCategoria, main);
 });
 
-check.addEventListener("change", () => {
-    let filtradoPorCategoria = filtrarPorCategoria(filtradoPorNombre);
-    const filtradoPorNombre = filtrarPorNombre(events, input.value);
- 
-  condicionalesCruzadas(filtradoPorNombre, filtradoPorCategoria)
+check.addEventListener("input", () => {
+  const filtradoPorNombre = filtrarPorNombre(events, input.value);
+  let filtradoPorCategoria = filtrarPorCategoria(filtradoPorNombre);
+  mostrarTarjeta(filtradoPorCategoria, main);
 });
-function condicionalesCruzadas(filtradoPorNombre, filtradoPorCategoria) {
-    if (filtradoPorNombre.length === data.events.length && filtradoPorCategoria.length === 0){
-        mostrarTarjeta(events, contenedor)
-        return
-    }
-
-    if (filtradoPorNombre.length !== data.events.length && filtradoPorCategoria.length === 0){
-        mostrarTarjeta(filtradoPorNombre, contenedor)
-        return
-
-
-    if (filtradoPorCategoria.length !== 0 && filtradoPorNombre.length === data.events.length){
-        mostrarTarjeta(filtradoPorCategoria, contenedor)
-        return
-    }
-
-    if (filtradoPorNombre.length !== data.events.length && filtradoPorCategoria.length !== 0){
-        mostrarTarjeta(filtradoPorCategoria, contenedor)
-    }
-}}
