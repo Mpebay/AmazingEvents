@@ -9,7 +9,7 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
         let eventosOrdenadosPorCapacidad = arrayNuevosEventos.sort((a, b) => b.capacity - a.capacity)
         let eventoDeMayorCapacidad = eventosOrdenadosPorCapacidad.slice(0, 1)
         let eventosPasados = arrayNuevosEventos.filter(evento => evento.assistance)
-        let eventosFuturos = arrayNuevosEventos.filter(evento =>evento.estimate )
+        let eventosFuturos = arrayNuevosEventos.filter(evento => evento.estimate)
         let arrayEventosModificados = eventosPasados.map(evento => {
             return {
                 name: evento.name,
@@ -50,6 +50,7 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
         crearTabla2(bucleArrayFuturos, contendorTabla3)
 
     })
+.catch(error => console.log(error))
 
 function crearTabla1(array, array1, array2) {
     return `<tr>
@@ -59,23 +60,23 @@ function crearTabla1(array, array1, array2) {
 </tr>`
 }
 
-function crearTabla2(array, contenedor ){
-   let filaTabla2 = ""
-   for (const objeto of array) {
-    filaTabla2 += `<tr>
+function crearTabla2(array, contenedor) {
+    let filaTabla2 = ""
+    for (const objeto of array) {
+        filaTabla2 += `<tr>
     <td>${objeto.categoria}</td>
     <td>$ ${objeto.ganancias}</td>
     <td>${objeto.porcentajeAsistencia.toFixed(2)} %</td>
-  </tr>` 
-   }
-   contenedor.innerHTML = filaTabla2
-    
+  </tr>`
+    }
+    contenedor.innerHTML = filaTabla2
+
 }
 
 function mostrarTabla(tabla, contenedor) {
     contenedor.innerHTML = tabla
 }
-function reduccionDeArrayEventos (arrayDeArrays){
+function reduccionDeArrayEventos(arrayDeArrays) {
     let resultadoReduce = 0
     let arrayAux = []
     for (const array of arrayDeArrays) {
@@ -83,14 +84,14 @@ function reduccionDeArrayEventos (arrayDeArrays){
         let revenues = 0
         let percentage = 0
         resultadoReduce = array.reduce((acc, act) => {
-                    category = act.category
-                    revenues += act.revenues
-                    percentage += act.percentage
-                    return {
-                        categoria : act.category,
-                        ganancias : revenues,
-                        porcentajeAsistencia : percentage/array.length
-                    }
+            category = act.category
+            revenues += act.revenues
+            percentage += act.percentage
+            return {
+                categoria: act.category,
+                ganancias: revenues,
+                porcentajeAsistencia: percentage / array.length
+            }
         }, {})
         arrayAux.push(resultadoReduce)
     }
