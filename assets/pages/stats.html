@@ -24,68 +24,58 @@
   </header>
   <h3 class="d-flex justify-content-center bg-secondary">Stats</h3>
   <main>
-    <table class="table table-bordered">
+    <table class="table table-striped">
       <thead>
         <tr>
-          <th>Events Statistics</th>
+          <h3>Events Statistics</h3>
+          <th>Events with highest % of assistance</th>
+          <th>Events with lowest % of assistance</th>
+          <th>Events with larger capacity</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Events with highest % of assistance</td>
-          <td>Events with lowest % of assistance</td>
-          <td>Events with larger capacity</td>
-        </tr>
+      <tbody id="idBody">
         <tr>
           <td></td>
           <td></td>
           <td></td>
         </tr>
-        <thead>
-          <tr>
-            <th>Upcoming events statistics by category</th>
-          </tr>
-        </thead>
-      <tbody>
-        <tr>
-          <td>Categories</td>
-          <td>Revenues</td>
-          <td>Percentage of assistance</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <thead>
-          <tr>
-            <th>Past events statistics by category</th>
-          </tr>
-        </thead>
-      <tbody>
-        <tr>
-          <td>Categories</td>
-          <td>Revenues</td>
-          <td>Percentage of assistance</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-
       </tbody>
-    </table>
+      </table>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <h3>Past events Statistic</h3>
+            <th>Categories</th>
+            <th>Revenues</th>
+            <th>Assistance</th>
+          </tr>
+        </thead>
+        <tbody id="idBody2">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+        </table>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <h3>Upcoming events Statistic</h3>
+              <th>Categories</th>
+              <th>Estimate Revenues</th>
+              <th>Estimate Assistance</th>
+            </tr>
+          </thead>
+          <tbody id="idBody3">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          </table>
+    
   </main>
   <footer class="d-flex justify-content-between align-items-center bg-secondary">
     <div class="footer">
@@ -99,7 +89,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-
+  <script src="../js/stats.js"></script>
 </body>
 
 </html>
